@@ -17,7 +17,7 @@ POINTS_FILE = Path(__file__).resolve().with_name(
 TOOL = 2
 USER = 0
 
-SPEED = 5
+SPEED = 35
 APPROACH_Z_MM = 150
 
 # True = teach points
