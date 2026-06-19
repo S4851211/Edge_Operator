@@ -1,0 +1,21 @@
+services:
+
+  zenoh:
+    image: eclipse/zenoh-bridge-dds:latest
+    container_name: zenoh_edge
+    network_mode: host
+    command:
+      - "-d"
+      - "42"
+      - "-e"
+      - "tcp/sestrilevante.platform.myw.ai:11811"
+    restart: unless-stopped
+
+  vulcanexus:
+    image: eprosima/vulcanexus:humble-desktop
+    container_name: vulcanexus_vm
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: sleep infinity
+    restart: unless-stopped
